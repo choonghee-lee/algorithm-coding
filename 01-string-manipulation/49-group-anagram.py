@@ -8,6 +8,8 @@ class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         r = dict()
         
+        # sort()    -> In-place sort
+        # sorted()  -> return something!
         for w in strs:
             k = ''.join(sorted(w))
             if k in r:
