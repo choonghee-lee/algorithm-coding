@@ -28,12 +28,9 @@ class Solution:
         m = ''
         for i in range(len(s)):             # i = start, O(n)
             for j in range(len(s), i, -1):  # j = end, O(n^2)
-                print(i, j)
                 if len(m) >= j-i:           # To reduce time
-                    print('break')
                     break
                 elif s[i:j] == s[i:j][::-1]:
-                    print(i,j, s[i:j], s[i:j][::-1])
                     m = s[i:j]
                     break
         return m
