@@ -23,20 +23,20 @@ class Solution:
     
 # LeetCode 답안
 class Solution:
-def longestPalindrome(self, s: str) -> str:
-    # Memory to remember a palindrome
-    m = ''
-    for i in range(len(s)):             # i = start, O(n)
-        for j in range(len(s), i, -1):  # j = end, O(n^2)
-            print(i, j)
-            if len(m) >= j-i:           # To reduce time
-                print('break')
-                break
-            elif s[i:j] == s[i:j][::-1]:
-                print(i,j, s[i:j], s[i:j][::-1])
-                m = s[i:j]
-                break
-    return m
+    def longestPalindrome(self, s: str) -> str:
+        # Memory to remember a palindrome
+        m = ''
+        for i in range(len(s)):             # i = start, O(n)
+            for j in range(len(s), i, -1):  # j = end, O(n^2)
+                print(i, j)
+                if len(m) >= j-i:           # To reduce time
+                    print('break')
+                    break
+                elif s[i:j] == s[i:j][::-1]:
+                    print(i,j, s[i:j], s[i:j][::-1])
+                    m = s[i:j]
+                    break
+        return m
 
 """
 파이썬은 모든 문자열이 ASCII 범위에 있다면 Latin-1 인코딩(고정 1바이트),
